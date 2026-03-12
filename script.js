@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
        Typing Animation
        ========================================= */
     const typingText = document.getElementById('typing-text');
-    const words = ["build Scalable Web Apps", "create Mobile Experiences", "architect REST APIs", "design Premium UIs"];
+    const words = ["build React Native Apps", "develop Scalable Web Solutions", "integrate REST APIs", "create Production-Level Apps"];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;

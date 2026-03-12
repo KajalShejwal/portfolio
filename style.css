@@ -800,11 +800,76 @@ p {
     padding-left: 1.2rem;
 }
 
-.timeline-desc li {
+/* New Experience & Education Card Styles */
+.experience-card, .edu-card, .cert-card {
+    background-color: var(--surface-color);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    margin-bottom: 2rem;
+}
+
+.experience-card:hover, .edu-card:hover, .cert-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-light);
+    transform: translateY(-5px);
+}
+
+.exp-header, .edu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.exp-title h3, .edu-title h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    color: var(--primary-color);
+}
+
+.company, .school {
+    font-weight: 600;
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.duration, .edu-year {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+.exp-tasks {
+    list-style: none;
+    padding-left: 0;
+}
+
+.exp-tasks li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
     font-size: 0.95rem;
     color: var(--text-muted);
-    margin-bottom: 0.5rem;
-    list-style-type: disc;
+}
+
+.exp-tasks li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.edu-result {
+    font-weight: 700;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
 }
 
 /* =========================================
@@ -827,58 +892,82 @@ p {
 
 .contact-info {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
     width: 100%;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
-.contact-box {
+.contact-item {
     background-color: var(--surface-color);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 12px;
     box-shadow: var(--shadow-sm);
     border: 1px solid var(--border-color);
-    transition: var(--transition);
     display: flex;
-    flex-direction: column;
     align-items: center;
+    gap: 1.5rem;
+    text-align: left;
+    transition: var(--transition);
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-color);
+}
+
+.contact-item i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    background-color: var(--primary-light);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contact-item h4 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
     color: var(--text-color);
 }
 
-.contact-box:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--primary-light);
+.contact-item p, .contact-item p a {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-muted);
 }
 
-.contact-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: var(--primary-light);
-    color: var(--primary-color);
+.social-links-container {
     display: flex;
+    gap: 1rem;
     justify-content: center;
+    margin-top: 2rem;
+}
+
+.social-link {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    display: flex;
     align-items: center;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: var(--text-color);
     transition: var(--transition);
 }
 
-.contact-box:hover .contact-icon {
+.social-link:hover {
     background-color: var(--primary-color);
-    color: #ffffff;
-}
-
-.contact-box h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-}
-
-.contact-box p {
-    margin: 0;
-    font-size: 0.9rem;
+    color: white;
+    border-color: var(--primary-color);
+    transform: translateY(-3px);
 }
 
 /* =========================================
