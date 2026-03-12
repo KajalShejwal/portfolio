@@ -182,9 +182,18 @@ document.addEventListener('DOMContentLoaded', () => {
     let cursorX = 0, cursorY = 0;
     let followerX = 0, followerY = 0;
 
+    const bgVideo = document.getElementById('bg-video');
+
     window.addEventListener('mousemove', (e) => {
         mouseX = e.clientX;
         mouseY = e.clientY;
+        
+        // Parallax for video background
+        if (bgVideo) {
+            const xOffset = (mouseX / window.innerWidth - 0.5) * -30; // Inverse move on X
+            const yOffset = (mouseY / window.innerHeight - 0.5) * -30; // Inverse move on Y
+            bgVideo.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+        }
     });
 
     function animateCursor() {

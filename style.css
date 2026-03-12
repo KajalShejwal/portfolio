@@ -1080,6 +1080,37 @@ p {
 }
 
 /* =========================================
+   Interactive Video Background
+   ========================================= */
+.video-bg-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -3; /* Behind particles */
+    overflow: hidden;
+    pointer-events: none;
+    background-color: var(--bg-color);
+}
+
+#bg-video {
+    position: absolute;
+    top: -5vh;
+    left: -5vw;
+    width: 110vw;
+    height: 110vh;
+    object-fit: cover;
+    opacity: 0.08; /* Very subtle tech feel in light mode */
+    transition: transform 0.2s cubic-bezier(0.1, 0, 0.3, 1);
+}
+
+.dark-theme #bg-video {
+    opacity: 0.15; /* Brighter in dark mode */
+}
+
+
+/* =========================================
    Animations
    ========================================= */
 .cursor {
