@@ -229,4 +229,81 @@ document.addEventListener('DOMContentLoaded', () => {
             item.style.transform = 'translate(0, 0)';
         });
     });
+
+    /* =========================================
+       Particles.js Initialization
+       ========================================= */
+    if (typeof particlesJS !== 'undefined') {
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": { "enable": true, "value_area": 800 }
+                },
+                "color": { "value": "#818cf8" },
+                "shape": { "type": "circle" },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": { "enable": false }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": { "enable": false }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#818cf8",
+                    "opacity": 0.3,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": { "enable": false }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": { "enable": true, "mode": "grab" },
+                    "onclick": { "enable": true, "mode": "push" },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": { "distance": 140, "line_linked": { "opacity": 1 } },
+                    "push": { "particles_nb": 4 }
+                }
+            },
+            "retina_detect": true
+        });
+        
+        // Update particle colors based on theme
+        const updateParticleColor = () => {
+            const pJS = window.pJSDom[0].pJS;
+            if (body.classList.contains('dark-theme')) {
+                pJS.particles.color.value = '#818cf8';
+                pJS.particles.line_linked.color = '#818cf8';
+            } else {
+                pJS.particles.color.value = '#4f46e5';
+                pJS.particles.line_linked.color = '#4f46e5';
+            }
+            pJS.fn.particlesRefresh();
+        };
+
+        // Hook into theme toggle
+        themeToggle.addEventListener('click', () => {
+            setTimeout(updateParticleColor, 50);
+        });
+        
+        // Initial set based on saved theme
+        setTimeout(updateParticleColor, 100);
+    }
 });
