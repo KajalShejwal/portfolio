@@ -129,4 +129,44 @@ document.addEventListener('DOMContentLoaded', () => {
             shape.style.transform = `translateY(${yPos}px)`;
         });
     });
+
+    /* =========================================
+       Typing Animation
+       ========================================= */
+    const typingText = document.getElementById('typing-text');
+    const words = ["build Scalable Web Apps", "create Mobile Experiences", "architect REST APIs", "design Premium UIs"];
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typeSpeed = 100;
+
+    function type() {
+        const currentWord = words[wordIndex];
+        
+        if (isDeleting) {
+            typingText.textContent = currentWord.substring(0, charIndex - 1);
+            charIndex--;
+            typeSpeed = 50;
+        } else {
+            typingText.textContent = currentWord.substring(0, charIndex + 1);
+            charIndex++;
+            typeSpeed = 150;
+        }
+
+        if (!isDeleting && charIndex === currentWord.length) {
+            isDeleting = true;
+            typeSpeed = 2000; // Pause at end
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+            typeSpeed = 500;
+        }
+
+        setTimeout(type, typeSpeed);
+    }
+
+    // Start typing animation
+    if (typingText) {
+        setTimeout(type, 1000);
+    }
 });
