@@ -114,4 +114,19 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => {
         revealOnScroll.observe(el);
     });
+
+    /* =========================================
+       Parallax Scrolling Effect
+       ========================================= */
+    const parallaxShapes = document.querySelectorAll('.parallax-shape');
+    
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        
+        parallaxShapes.forEach(shape => {
+            const speed = shape.getAttribute('data-speed');
+            const yPos = -(scrollY * speed / 10);
+            shape.style.transform = `translateY(${yPos}px)`;
+        });
+    });
 });

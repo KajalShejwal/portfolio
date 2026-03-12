@@ -865,6 +865,66 @@ p {
 }
 
 /* =========================================
+   Parallax Background
+   ========================================= */
+.parallax-bg-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.parallax-shape {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.15;
+    background: var(--primary-color);
+    transition: transform 0.1s ease-out;
+}
+
+.dark-theme .parallax-shape {
+    opacity: 0.1;
+}
+
+.shape-1 {
+    width: 300px;
+    height: 300px;
+    top: 10%;
+    left: -5%;
+    background: linear-gradient(45deg, var(--primary-color), #ec4899);
+}
+
+.shape-2 {
+    width: 400px;
+    height: 400px;
+    top: 60%;
+    right: -10%;
+    background: linear-gradient(45deg, #0ea5e9, var(--primary-color));
+}
+
+.shape-3 {
+    width: 250px;
+    height: 250px;
+    top: 30%;
+    right: 15%;
+    background: linear-gradient(45deg, #f59e0b, #ef4444);
+    opacity: 0.1;
+}
+
+.shape-4 {
+    width: 350px;
+    height: 350px;
+    top: 80%;
+    left: 10%;
+    background: linear-gradient(45deg, var(--primary-color), #8b5cf6);
+}
+
+/* =========================================
    Animations
    ========================================= */
 .fade-in-up {
