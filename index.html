@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kajal Shejwal | Full Stack Developer</title>
+    <meta name="description" content="Portfolio of Kajal Shejwal, a Full Stack Developer specializing in React.js, React Native, Java Spring Boot, and modern web technologies.">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-theme">
+    
+    <!-- Header / Navigation -->
+    <header id="header" class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">Kajal<span>.dev</span></a>
+            
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark and light theme">
+                    <i class="fas fa-moon dark-icon"></i>
+                    <i class="fas fa-sun light-icon"></i>
+                </button>
+                <button class="mobile-toggle" aria-label="Toggle mobile menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero section">
+            <div class="container hero-container">
+                <div class="hero-content fade-in-up">
+                    <p class="greeting">Hi, my name is</p>
+                    <h1 class="hero-title">Kajal Shejwal.</h1>
+                    <h2 class="hero-subtitle">I build things for the web & mobile.</h2>
+                    <p class="hero-desc">
+                        I am a Full Stack Developer based in Pune, India, specializing in React.js, React Native, Java Spring Boot, and modern web technologies. I build scalable applications, REST APIs, and responsive user interfaces.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary">Contact Me</a>
+                        <a href="#" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper fade-in-up" style="animation-delay: 0.2s;">
+                    <div class="hero-shape"></div>
+                    <div class="hero-image-placeholder">
+                        <i class="fas fa-code hero-icon"></i>
+                    </div>
+                </div>
+            </div>
+            <a href="#about" class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <h2>About Me</h2>
+                    <div class="heading-line"></div>
+                </div>
+                
+                <div class="about-content reveal">
+                    <div class="about-text">
+                        <p>
+                            Hello! I am Kajal Shejwal, a passionate Full Stack Developer with a strong focus on frontend and mobile development. I enjoy building efficient applications and solving real-world problems using technology.
+                        </p>
+                        <p>
+                            With experience spanning across modern frameworks like React.js and React Native, as well as robust backend technologies like Java Spring Boot, I thrive in environments where I can build end-to-end solutions. My approach to development combines clean, maintainable code with intuitive, user-friendly designs.
+                        </p>
+                        <p>
+                            Whether it's designing a responsive web interface or architecting a scalable REST API, I am dedicated to delivering high-quality software that makes a positive impact.
+                        </p>
+                        
+                        <div class="about-details">
+                            <div class="detail-item">
+                                <span class="detail-label">Location:</span>
+                                <span class="detail-value">Pune, India</span>
+                            </div>
+                            <div class="detail-item">
+                                <span class="detail-label">Education:</span>
+                                <span class="detail-value">MSc Computer Science</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-stats-container">
+                        <div class="stat-box">
+                            <i class="fas fa-laptop-code stat-icon"></i>
+                            <h3 class="stat-number">Full Stack</h3>
+                            <p class="stat-text">Development</p>
+                        </div>
+                        <div class="stat-box">
+                            <i class="fas fa-mobile-alt stat-icon"></i>
+                            <h3 class="stat-number">Mobile</h3>
+                            <p class="stat-text">Apps Creation</p>
+                        </div>
+                        <div class="stat-box">
+                            <i class="fas fa-server stat-icon"></i>
+                            <h3 class="stat-number">Backend</h3>
+                            <p class="stat-text">API Design</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section bg-alt">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <h2>My Skills</h2>
+                    <div class="heading-line"></div>
+                </div>
+                
+                <div class="skills-grid reveal">
+                    <!-- Frontend -->
+                    <div class="skill-category">
+                        <div class="skill-category-header">
+                            <i class="fas fa-desktop category-icon text-primary"></i>
+                            <h3>Frontend</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class="fab fa-react skill-icon" style="color: #61DAFB;"></i>
+                                <span>React.js</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-react skill-icon" style="color: #61DAFB;"></i>
+                                <span>React Native</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-js skill-icon" style="color: #F7DF1E;"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-html5 skill-icon" style="color: #E34F26;"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-css3-alt skill-icon" style="color: #1572B6;"></i>
+                                <span>CSS3</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Backend -->
+                    <div class="skill-category">
+                        <div class="skill-category-header">
+                            <i class="fas fa-server category-icon text-primary"></i>
+                            <h3>Backend</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class="fab fa-java skill-icon" style="color: #5382A1;"></i>
+                                <span>Java</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-leaf skill-icon" style="color: #6DB33F;"></i>
+                                <span>Spring Boot</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-node-js skill-icon" style="color: #339933;"></i>
+                                <span>Node.js (Basic)</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Database -->
+                    <div class="skill-category">
+                        <div class="skill-category-header">
+                            <i class="fas fa-database category-icon text-primary"></i>
+                            <h3>Database</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class="fas fa-database skill-icon" style="color: #4479A1;"></i>
+                                <span>MySQL</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-database skill-icon" style="color: #336791;"></i>
+                                <span>PostgreSQL</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-leaf skill-icon" style="color: #47A248;"></i>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tools -->
+                    <div class="skill-category">
+                        <div class="skill-category-header">
+                            <i class="fas fa-tools category-icon text-primary"></i>
+                            <h3>Tools</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class="fab fa-git-alt skill-icon" style="color: #F05032;"></i>
+                                <span>Git</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-github skill-icon" style="color: var(--text-color);"></i>
+                                <span>GitHub</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-code skill-icon" style="color: #007ACC;"></i>
+                                <span>VS Code</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-rocket skill-icon" style="color: #FF6C37;"></i>
+                                <span>Postman</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects section">
+            <div class="container">
+                <div class="section-heading reveal">
+                    <h2>Featured Projects</h2>
+                    <div class="heading-line"></div>
+                </div>
+                
+                <div class="project-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card reveal">
+                        <div class="project-content">
+                            <div class="project-header">
+                                <div class="folder-icon"><i class="far fa-folder"></i></div>
+                                <div class="project-links">
+                                    <a href="#" aria-label="GitHub Link"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">Housing Society Mgt System</h3>
+                            <div class="project-desc">
+                                <p>A comprehensive mobile application for managing housing societies. Built to simplify communication and operations.</p>
+                                <ul>
+                                    <li>User Registration & Profiles</li>
+                                    <li>Society & Maintenance Management</li>
+                                    <li>Notice Board & Vehicle Tracking</li>
+                                </ul>
+                            </div>
+                            <ul class="project-tech-list">
+                                <li>React Native</li>
+                                <li>REST APIs</li>
+                                <li>Database</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-card reveal" style="transition-delay: 0.1s;">
+                        <div class="project-content">
+                            <div class="project-header">
+                                <div class="folder-icon"><i class="far fa-folder"></i></div>
+                                <div class="project-links">
+                                    <a href="#" aria-label="GitHub Link"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">ATM Simulator System</h3>
+                            <div class="project-desc">
+                                <p>A secure banking application that simulates ATM functionalities to manage accounts and process transactions.</p>
+                                <ul>
+                                    <li>Secure user authentication</li>
+                                    <li>Account balance & transaction history</li>
+                                    <li>Deposit, withdrawal & transfer</li>
+                                </ul>
+                            </div>
+                            <ul class="project-tech-list">
+                                <li>Java</li>
+                                <li>Spring Boot</li>
+                                <li>Angular</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="project-card reveal" style="transition-delay: 0.2s;">
+                        <div class="project-content">
+                            <div class="project-header">
+                                <div class="folder-icon"><i class="far fa-folder"></i></div>
+                                <div class="project-links">
+                                    <a href="#" aria-label="GitHub Link"><i class="fab fa-github"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">Product Management System</h3>
+                            <div class="project-desc">
+                                <p>An inventory management system to reliably handle product lifecycles through robust backend services.</p>
+                                <ul>
+                                    <li>Add, edit, and search products</li>
+                                    <li>Delete product functionality</li>
+                                    <li>Clean code architecture</li>
+                                </ul>
+                            </div>
+                            <ul class="project-tech-list">
+                                <li>Java APIs</li>
+                                <li>Database</li>
+                                <li>Postman</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 4 -->
+                    <div class="project-card reveal" style="transition-delay: 0.3s;">
+                        <div class="project-content">
+                            <div class="project-header">
+                                <div class="folder-icon"><i class="far fa-folder"></i></div>
+                                <div class="project-links">
+                                    <a href="#" aria-label="GitHub Link"><i class="fab fa-github"></i></a>
+                                    <a href="#" aria-label="External Link"><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">Quiz Mobile App</h3>
+                            <div class="project-desc">
+                                <p>An interactive mobile trivia application designed to test users' knowledge across various categories.</p>
+                                <ul>
+                                    <li>Dynamic quiz questions interface</li>
+                                    <li>Real-time score tracking mechanism</li>
+                                    <li>Detailed results screen</li>
+                                </ul>
+                            </div>
+                            <ul class="project-tech-list">
+                                <li>React Native</li>
+                                <li>JavaScript</li>
+                                <li>UI/UX</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Education Section -->
+        <section id="experience" class="experience section bg-alt">
+            <div class="container">
+                <div class="timeline-container">
+                    
+                    <!-- Experience -->
+                    <div class="timeline-column">
+                        <div class="section-heading reveal">
+                            <h2>Experience</h2>
+                            <div class="heading-line"></div>
+                        </div>
+                        
+                        <div class="timeline reveal">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">Frontend Developer Intern</h3>
+                                    <div class="timeline-subtitle">Sutradhar</div>
+                                    <div class="timeline-date"><i class="far fa-calendar-alt"></i> Past</div>
+                                    <ul class="timeline-desc">
+                                        <li>Developed mobile user interfaces using React Native to ensure seamless user experiences.</li>
+                                        <li>Implemented responsive and reusable components to accelerate development workflows.</li>
+                                        <li>Integrated REST APIs with mobile frontends, improving app functionality and data synchronization.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Education -->
+                    <div class="timeline-column">
+                        <div class="section-heading reveal">
+                            <h2>Education</h2>
+                            <div class="heading-line"></div>
+                        </div>
+                        
+                        <div class="timeline reveal">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">MSc Computer Science</h3>
+                                    <div class="timeline-subtitle">University Name (Update Appropirately)</div>
+                                    <div class="timeline-date"><i class="far fa-calendar-alt"></i> Graduated</div>
+                                    <p class="timeline-desc" style="margin-top: 10px;">
+                                        Focused on software engineering, algorithms, database management systems, and advanced web technologies. 
+                                        Developed strong problem-solving skills and theoretical foundation in computer science.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section">
+            <div class="container">
+                <div class="section-heading center reveal">
+                    <h2>Get In Touch</h2>
+                    <div class="heading-line center"></div>
+                </div>
+                
+                <div class="contact-content reveal">
+                    <p class="contact-text">
+                        I am currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                    </p>
+                    
+                    <div class="contact-info">
+                        <a href="mailto:hello@example.com" class="contact-box">
+                            <div class="contact-icon"><i class="far fa-envelope"></i></div>
+                            <h3>Email</h3>
+                            <p>hello@example.com</p>
+                        </a>
+                        
+                        <a href="#" class="contact-box" target="_blank" rel="noopener noreferrer">
+                            <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+                            <h3>LinkedIn</h3>
+                            <p>linkedin.com/in/kajalshejwal</p>
+                        </a>
+                        
+                        <a href="#" class="contact-box" target="_blank" rel="noopener noreferrer">
+                            <div class="contact-icon"><i class="fab fa-github"></i></div>
+                            <h3>GitHub</h3>
+                            <p>github.com/kajalshejwal</p>
+                        </a>
+                    </div>
+                    
+                    <a href="mailto:hello@example.com" class="btn btn-primary lg-btn">Say Hello</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-social">
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:hello@example.com" aria-label="Email"><i class="far fa-envelope"></i></a>
+            </div>
+            <p class="footer-text">
+                Designed & Built by <span>Kajal Shejwal</span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
