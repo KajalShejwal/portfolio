@@ -169,4 +169,64 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typingText) {
         setTimeout(type, 1000);
     }
+
+    /* =========================================
+       Custom Cursor & Magnetic Effect
+       ========================================= */
+    const cursor = document.querySelector('.custom-cursor');
+    const follower = document.querySelector('.cursor-follower');
+    const magneticItems = document.querySelectorAll('.magnetic-item');
+    const interactiveElements = document.querySelectorAll('a, button, .project-card, .skill-item, .contact-box');
+
+    let mouseX = 0, mouseY = 0;
+    let cursorX = 0, cursorY = 0;
+    let followerX = 0, followerY = 0;
+
+    window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    function animateCursor() {
+        // Smooth interpolation
+        cursorX += (mouseX - cursorX) * 0.2;
+        cursorY += (mouseY - cursorY) * 0.2;
+        
+        followerX += (mouseX - followerX) * 0.1;
+        followerY += (mouseY - followerY) * 0.1;
+
+        if (cursor) {
+            cursor.style.left = mouseX + 'px';
+            cursor.style.top = mouseY + 'px';
+        }
+        
+        if (follower) {
+            follower.style.left = followerX + 'px';
+            follower.style.top = followerY + 'px';
+        }
+
+        requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    // Hover effect for interactive elements
+    interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', () => body.classList.add('cursor-hover'));
+        el.addEventListener('mouseleave', () => body.classList.remove('cursor-hover'));
+    });
+
+    // Magnetic effect logic
+    magneticItems.forEach(item => {
+        item.addEventListener('mousemove', (e) => {
+            const rect = item.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            
+            item.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+        });
+
+        item.addEventListener('mouseleave', () => {
+            item.style.transform = 'translate(0, 0)';
+        });
+    });
 });
